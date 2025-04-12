@@ -4,67 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab Task 1</title>
-    <style>
-        body{
-            background-color: lightgray;
-            text-align: center;
-        }
-        h1{
-            color: blue;
-        }
-        .containter{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 5px;
-        }
-        .box-1{
-            display: flex;
-            justify-content: center;
-            background-color: red;
-            height: 200px;
-            align-items: center;
-            text-transform: uppercase;
-
-        }
-        .box-2{
-            display: flex;
-            justify-content: center;
-            background-color: green;
-            height: 100px;
-            align-items: center;
-            text-transform: uppercase;
-
-        }
-        .box-3{
-            display: flex;
-            justify-content: center;
-            background-color: blue;
-            height: 100px;
-            align-items: center;
-            text-transform: uppercase;
-
-        }
-        .box-4{
-            display: flex;
-            justify-content: center;
-            background-color: yellow;
-            height: 200px;
-            align-items: center;
-            text-transform: uppercase;
-            margin-top: -100px;
-        }
-    </style>
+    <link rel="stylesheet" href = "style.css">
 </head>
 <body>
-    <img src="https://www.aiub.edu/Files/Templates/NewAIUB/assets/images/aiub-logo.svg" alt="AIUB LOGO" width="100" height="100"><br>
-    <h1>Welcome to AIUB</h1>
+    <h1>Air Quality Index</h1>
     <div class="containter">
         <div class="box-1">
             <p> box 1</p>
         </div>
         <div class="box-2">
-            <p> box 2</p>
+            <div class="form-container">
+                <form action="#">
+                    <h4 style="color: red;" id = "error_msg"></h4>
+                    <h1> User Registration</h1>
+                    <input type="text"  id="full_name" name="full_name" placeholder="Full Name" >
+                    <input type="email"  id="email_field" name="email" placeholder="Email Address">
+                    <input type="password" id="pass_field"  name="password" placeholder="Enter a password" >
+                    <input type="password" id="cpass_field"  name="cpassword" placeholder="Retype password" >
+                    <input type="text"  id="location_city" name="location_city" placeholder="Your city" >
+                    <input type="text" id="zip" name="zip" placeholder="Zip Code" >
+                    <div class="pf_city">
+                        <label for="city">Preferred City: </label>
+                        <select name="preferred city" id="p_city" class="selectiondd">
+                            <option value="dhaka">Dhaka</option>
+                            <option value="Rajshahi">Rajshahi</option>
+                            <option value="mymensingb">mymensingh</option>
+                            <option value="khulna">khulna</option>
+                        </select>
+                    </div>
+                    <div class="checkboxx">
+                        <input type="checkbox" id="checked" name="ischecked" value="check" id="ckbox">
+                        <p id="tos">Accept <a href="tos.html">terms of service.</a></p>
+                    </div>
+                        
+                    
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
         </div>
+
         <div class="box-3">
             <p> box 3</p>
         </div>
@@ -73,5 +52,6 @@
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
