@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab Task 1</title>
-    <link rel="stylesheet" href = "style.css">
+    <link rel="stylesheet" href = "css/style.css">
+    <link rel ="stylesheet" href="css/popup-style.css"></link>
 </head>
 <body>
+    <button type="submit" class="popup_button" onclick="openPopup()">Okay</button>
+    <div class="popup" id="popup">
+        <h2 id="popup_title"></h2>
+        <p id="popup_message"></p>
+        <button type="submit" class="popup_button" onclick="closePopup()">Okay</button>
+    </div>
     <h1>Air Quality Index</h1>
     <div class="containter">
         <div class="box-1">
@@ -14,8 +21,7 @@
         </div>
         <div class="box-2">
             <div class="form-container">
-                <form action="#">
-                    <h4 style="color: red;" id = "error_msg"></h4>
+                <form id="registrationForm">
                     <h1> User Registration</h1>
                     <input type="text"  id="full_name" name="full_name" placeholder="Full Name" >
                     <input type="email"  id="email_field" name="email" placeholder="Email Address">
@@ -24,22 +30,19 @@
                     <input type="text"  id="location_city" name="location_city" placeholder="Your city" >
                     <input type="text" id="zip" name="zip" placeholder="Zip Code" >
                     <div class="pf_city">
-                        <label for="city">Preferred City: </label>
-                        <select name="preferred city" id="p_city" class="selectiondd">
-                            <option value="dhaka">Dhaka</option>
+                        <p>Preferred City: </p>
+                        <select name="preferred_city" id="p_city" class="selectiondd">
+                            <option value="Dhaka">Dhaka</option>
                             <option value="Rajshahi">Rajshahi</option>
-                            <option value="mymensingb">mymensingh</option>
-                            <option value="khulna">khulna</option>
+                            <option value="Mymensingh">mymensingh</option>
+                            <option value="Khulna">khulna</option>
                         </select>
                     </div>
                     <div class="checkboxx">
-                        <input type="checkbox" id="checked" name="ischecked" value="check" id="ckbox">
+                        <input type="checkbox" id="terms_checked" name="ischecked" value="check" id="ckbox">
                         <p id="tos">Accept <a href="tos.html">terms of service.</a></p>
-                    </div>
-                        
-                    
-
-                    <button type="submit">Sign Up</button>
+                    </div>                    
+                    <button type="submit" id="register" class="register">Sign Up</button>
                 </form>
             </div>
         </div>
@@ -52,6 +55,7 @@
         </div>
 
     </div>
-    <script src="script.js"></script>
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/popup.js"></script>
 </body>
 </html>
