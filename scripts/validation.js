@@ -70,9 +70,11 @@ if (form) {
 
         
         if (errors.length > 0) {
+            let error_message;
             errors.forEach(error=>{
                 console.log(error);
             });
+            alert(errors[0]);
             event.preventDefault(); 
             //errorMsgElement.innerHTML = errors.join('<br>');
         } else {
