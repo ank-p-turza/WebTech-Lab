@@ -1,0 +1,4 @@
+test/
+*.log
+.env
+scripts/test/
