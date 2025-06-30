@@ -36,12 +36,13 @@ h1{
 }
 
 /* Add horizontal line in the middle */
+/* have to remove the box-3 and box-4 must take the whole place of the box-1 and box-3 */
 .containter::after {
     content: '';
     position: absolute;
-    top: 70%;
-    left: 0;
-    width: 100%;
+    top: 60%;
+    left: 50%;
+    width: 50%;
     height: 2px;
     background-color: #6a7d97;
     z-index: 1;
@@ -70,7 +71,7 @@ h1{
   width: 80%;
   margin-bottom: 40px;
 
-  th {
+th {
     background-color: #d0def2;
     padding: 1.5rem 2rem;
     text-transform: uppercase;
@@ -78,9 +79,16 @@ h1{
     font-size: 0.7rem;
     font-weight: 900;
   }
+th[colspan='3']{
+    text-align: center;
+    background:#a7bad3;
+    font-size: large;
+    color: white;
+}
 
   td {
     padding: 1rem 2rem;
+    filter: blur(5px);
   }
 
   tr:nth-child(even) {
@@ -116,7 +124,7 @@ h1{
     height: fit-content;
     border-radius: 10px;
     padding-top: 20px;
-    /* /* border-left: 0.5px solid #205781; */
+    /* border-left: 0.5px solid #205781; */
     /* border: 0.5px solid #205781;  */
     /* box-shadow: #a7bad3 0px 15px 25px; */
 }
@@ -126,7 +134,7 @@ h1{
     display: flex;
     justify-content: center;
     /*background-color: blue;*/
-    height: 545px;
+    height: 0px;
     align-items: center;
     text-transform: uppercase;
     border-radius: 10px;
@@ -144,6 +152,7 @@ h1{
     height: 545px;
     align-items: center;
     border-radius: 10px;
+    margin-top: -510px;
     /* border: 0.5px solid #205781; */
     /* box-shadow: #a7bad3 0px 15px 25px; */
 }

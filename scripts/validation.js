@@ -4,7 +4,8 @@ function validateName(name) {
 
 function validateEmail(email) {
     if (!email) return false;
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
+;
     return regex.test(email);
 }
 
